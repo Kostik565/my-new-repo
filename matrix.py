@@ -1,5 +1,13 @@
 import random
 
+def find_suspect():
+  a = [random.randint(160, 200) for i in range(80)]
+  k = [i for i in a if 170 <= i <= 175]
+  m = len(k)
+  return k,m
+
+def faind():
+    return find_suspect()
 P = []  # Глобальна змінна для населення
 
 def gener_matr(a, b):
@@ -46,3 +54,8 @@ def work_with_matrices(a, b):
     max_value, max_i = max_list(S)
     print("\nМаксимальне значення:", max_value)
     print("\nРік з максимальною злочинністю:", max_i + 2005)
+
+    print("\n=== Пошук підозрюваних ===")
+    k,m =  faind()
+    print("Список підозрюваних: ", k)
+    print("Кількість підозрюваних:", m)
